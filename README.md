@@ -35,7 +35,7 @@ Contribuições são bem-vindas! Sinta-se à vontade para enviar pull requests p
 
 ## Autor
 
-Seu nome
+Juliana Prado
 
 ## Licença
 
