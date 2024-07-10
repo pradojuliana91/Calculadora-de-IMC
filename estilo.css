@@ -1,0 +1,222 @@
+/* Importa a fonte 'Poppins' do Google Fonts com diferentes pesos */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+/* Estilos globais para o documento */
+* {
+    font-family: 'Poppins', sans-serif; /* Define a fonte padrão para todo o documento */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos específicos para o corpo do documento */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #18181b; /* Cor de fundo do corpo */
+}
+
+/* Container principal */
+#container {
+    display: flex;
+    align-items: center;
+    gap: 3.5rem; /* Espaçamento entre os elementos filhos */
+}
+
+/* Estilos para a imagem no lado esquerdo */
+#img img {
+    width: 31rem; /* Largura da imagem */
+}
+
+/* Estilos para o bloco do calculador de IMC */
+#calculator {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Espaçamento entre os elementos internos */
+    padding: 2rem; /* Espaçamento interno */
+    color: #f8fafc; /* Cor do texto */
+    background-color: #262626; /* Cor de fundo */
+    border-radius: 8px; /* Bordas arredondadas */
+}
+
+/* Estilos para o formulário dentro do calculador */
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Espaçamento entre os campos */
+}
+
+/* Estilos para o título da calculadora */
+#title {
+    font-size: 2.25rem; /* Tamanho da fonte */
+    position: relative; /* Posição relativa para elementos filhos absolutos */
+}
+
+/* Estilos para o efeito de linha sob o título */
+#title::after {
+    position: absolute; /* Posição absoluta em relação ao título */
+    content: ''; /* Conteúdo vazio */
+    width: 8rem; /* Largura da linha */
+    height: 3px; /* Altura da linha */
+    border-radius: 3px; /* Bordas arredondadas */
+    background-color: #67B637; /* Cor da linha */
+    bottom: 0; /* Alinha a linha na parte inferior do título */
+    left: 0; /* Alinha a linha no início do título */
+}
+
+/* Estilos para o rótulo e caixa de entrada de peso e altura */
+.input-box label {
+    font-weight: 500; /* Peso da fonte */
+    font-size: 1.1rem; /* Tamanho da fonte */
+    color: #cbd5e1; /* Cor do texto */
+}
+
+/* Estilos para o campo de entrada com ícone */
+.input-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3f3f46; /* Cor de fundo */
+    padding: 0.3rem; /* Espaçamento interno */
+    border-radius: 3px; /* Bordas arredondadas */
+    margin-top: 3px; /* Margem superior */
+}
+
+/* Estilos para o ícone e texto dentro do campo de entrada */
+.input-field span,
+.input-field i {
+    color: #cbd5e1; /* Cor do texto e ícone */
+    font-size: 1.3rem; /* Tamanho da fonte */
+    padding: 0.6rem 1rem; /* Espaçamento interno */
+}
+
+/* Estilos para o campo de entrada de dados */
+.input-field input {
+    background-color: transparent; /* Fundo transparente */
+    border: none; /* Sem borda */
+    width: 100%; /* Largura total */
+    font-size: 1.3rem; /* Tamanho da fonte */
+    color: #f8fafc; /* Cor do texto */
+    padding: 0 0.5rem; /* Espaçamento interno */
+}
+
+/* Remove as setas de incremento/decremento nos campos numéricos */
+.input-field input::-webkit-outer-spin-button,
+.input-field input::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+/* Estilos para o foco no campo de entrada */
+.input-field input:focus {
+    outline: none; /* Sem contorno ao focar */
+}
+
+/* Estilos para o botão de calcular */
+#calculate {
+    border: none; /* Sem borda */
+    font-size: 1.25rem; /* Tamanho da fonte */
+    font-weight: bold; /* Peso da fonte */
+    color: #f8fafc; /* Cor do texto */
+    background-color: #67B637; /* Cor de fundo */
+    padding: 0.5rem 0; /* Espaçamento interno */
+    border-radius: 3px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro */
+    width: 100%; /* Largura total */
+}
+
+/* Estilos para o resultado do cálculo do IMC */
+#result {
+    display: flex;
+    gap: 2rem; /* Espaçamento entre os elementos */
+    align-items: center; /* Alinhamento vertical */
+    border-top: 1px solid #ffffff34; /* Linha superior com transparência */
+    padding: 0.75rem 0; /* Espaçamento interno */
+}
+
+/* Estilos para o bloco do IMC */
+#bmi {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2.25rem; /* Tamanho da fonte */
+}
+
+/* Estilos para o texto abaixo do valor do IMC */
+#bmi span:last-child {
+    font-size: 0.875rem; /* Tamanho da fonte */
+    color: #cbd5e1; /* Cor do texto */
+}
+
+/* Estilos para o texto de estado de peso normal */
+.normal {
+    color: #67B637; /* Cor verde */
+}
+
+/* Estilos para o texto de estado de atenção */
+.attention {
+    color: #dc2626; /* Cor vermelha */
+}
+
+/* Estilos para a descrição do estado de saúde */
+#description {
+    width: 15.5rem; /* Largura fixa */
+}
+
+/* Estilos para o bloco de mais informações */
+#more_info {
+    text-align: center; /* Alinhamento central */
+    border-top: 1px solid #ffffff34; /* Linha superior com transparência */
+    padding-top: 1.5rem; /* Espaçamento interno superior */
+}
+
+/* Estilos para o link de mais informações */
+#more_info a {
+    display: flex; /* Exibição flexível */
+    justify-content: center; /* Justificação central */
+    align-items: center; /* Alinhamento central */
+    gap: 0.6rem; /* Espaçamento entre elementos */
+    color: #67B637; /* Cor do texto */
+    font-size: 0.875rem; /* Tamanho da fonte */
+    text-decoration: none; /* Sem decoração de texto */
+    transition: color 0.5s; /* Transição suave de cor */
+}
+
+/* Estilos para o hover no link de mais informações */
+#more_info a:hover {
+    color: #cbd5e1; /* Cor do texto ao passar o mouse */
+}
+
+/* Classe para ocultar elementos */
+.hidden {
+    display: none; /* Oculta o elemento */
+}
+
+/* Media query para dispositivos com largura máxima de 1024px */
+@media screen and (max-width: 1024px) {
+    #img {
+        display: none; /* Oculta a imagem */
+    }
+}
+
+/* Media query para dispositivos com largura máxima de 500px */
+@media screen and (max-width: 500px) {
+    #img {
+        display: none; /* Oculta a imagem */
+    }
+
+    #container {
+        width: 100%; /* Largura total */
+        height: 100%; /* Altura total */
+    }
+
+    #calculator {
+        width: 100%; /* Largura total */
+        height: 100%; /* Altura total */
+        border-radius: 0; /* Remove bordas arredondadas */
+        justify-content: center; /* Justificação central */
+    }
+}
